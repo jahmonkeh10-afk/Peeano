@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>Browser Piano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PLAY IN YOUR BROWSER</p>
+        <h1>Virtual Piano</h1>
+      </div>
+      <div class="controls">
+        <label class="volume-control" for="volume">Volume <input id="volume" type="range" min="0" max="1" step="0.01" value="0.65"></label>
+        <button id="sustain" class="toggle" type="button" aria-pressed="false">Sustain: Off</button>
+      </div>
+    </header>
+
+    <section class="instructions" aria-label="Instructions">
+      <span><kbd>1</kbd> lowest note</span>
+      <span class="dot">•</span>
+      <span><kbd>M</kbd> highest note</span>
+      <span class="dot">•</span>
+      <span>Use your keyboard or click the keys</span>
+    </section>
+
+    <section class="piano-wrap" aria-label="Piano keyboard">
+      <div id="piano" class="piano">
+        <div id="white-keys" class="white-keys"></div>
+        <div id="black-keys" class="black-keys"></div>
+      </div>
+    </section>
+    <p id="status" class="status" aria-live="polite">Ready to play</p>
+    <footer>Tip: black keys use <kbd>Shift</kbd> + the key shown (for example <kbd>Shift</kbd> + <kbd>1</kbd> = <kbd>!</kbd>).</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
